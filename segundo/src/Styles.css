@@ -16,3 +16,19 @@
   width: 60px;
   height: 60px;
 }
+.main {
+  height: 65vh;
+  padding: 20px;
+  background-color: rgba(222, 184, 135, 0.493);
+}
+.footer {
+  height: 15vh;
+  background-color: burlywood;
+  color: white;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  display: block;
+  color: white;
+}

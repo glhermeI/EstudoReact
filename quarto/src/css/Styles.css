@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(175, 37, 37, 0.123);
+}
+.header img {
+  min-width: 130px;
+  max-width: 130px;
+  padding-right: 20px;
+}
+.header h1 {
+  width: 80vw;
+  text-align: center;
+}
+.header h2 {
+  width: 48vw;
+  text-align: right;
+}
+.container {
+  display: flex;
+  direction: row;
+}
+.container .mensagens {
+  width: 30vw;
+  padding: 20px;
+  margin: 5px;
+  height: 70vw;
+  background-color: sandybrown;
+}
+.container .conteudo {
+  width: 70vw;
+  padding: 20px;
+  margin: 5px;
+  height: 70vw;
+}

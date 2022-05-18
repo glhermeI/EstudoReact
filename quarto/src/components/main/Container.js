@@ -7,7 +7,13 @@ export default function Container(){
     //dos produtos. Depois usaremos o comando useEffect para carregar os produtos que vem da api.
     //O comando useEffect é um comando de laço, portanto é necessario fazer ele parar o laço quando termina de carregar os dados.
     //Isso é feito usando um colchetes ao final das instruções. Para obter os dados iremops utilizar o comando fetch dentro do useEffect.
-
+    const [nome,setNome] = useState ([
+        {
+            autor:"",
+            mensagem:"",
+            
+        }
+    ]);
     const [produtos,setProdutos] = useState ([
         {
             id:"",
@@ -25,15 +31,19 @@ export default function Container(){
             setProdutos(dados.output);
     })
     },[])
-
+    const carregaMensagem = (mensagem) => 
+    {
+        setNome(mensagem);
+        
+    };
 
 
 
 
     return(
         <div className="container">
-            <Mensagens dados={produtos.msg}/>
-            <Conteudo dados={produtos}/>
+            <Mensagens info={nome}/>
+            <Conteudo dados={produtos} acao = {carregaMensagem}/>
         </div>
     )
 }

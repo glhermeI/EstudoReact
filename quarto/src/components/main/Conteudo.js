@@ -1,7 +1,8 @@
 
 export default function Conteudo(props){
-    //Vamos iniciar o projeto lendo a url com os dados da api
-    //neste caso temos os produtos para ler montar a tela de conteudo de
+    const passarDados = (produto) => {
+        props.acao(produto)
+    };
     
     return(
         <div className="conteudo">
@@ -9,15 +10,14 @@ export default function Conteudo(props){
             <div className="itens">
             {
                 props.dados.map((itens,index) =>(
-                    <div key={index}>
+                    <div key={index} onClick={()=>{passarDados(itens.msg)}}>
                       <h3>{itens.nome}</h3>
-                      <p>{itens.nome}</p>
                       <p>{itens.categoria}</p>
-                      <p>R$ {itens.preco}</p>
+                      <p className="preco">R$ {itens.preco}</p>
                     </div>
                 ))
-            }
+            };
             </div>
         </div>
-    )
-}
+        )
+ }
